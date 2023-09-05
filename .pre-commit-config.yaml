@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: remark
+        name: remark
+        entry: npx remark --quiet --frail
+        language: node
+        types: [markdown]

@@ -1,0 +1,25 @@
+name: Lint Tests
+
+on:
+  push:
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+
+      - name: Install pre-commit
+        run: pip install "pre-commit>=3,<4"
+
+      - name: Run pre-commit checks
+        id: pre-commit
+        continue-on-error: true
+        run: pre-commit run --all-files
+
+      - name: Print NPM log
+        # if: failure() # && steps.pre-commit.outcome == 'failure'
+        run: tail -n +1 ~/.npm/_logs/*
