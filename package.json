@@ -1,0 +1,10 @@
+{
+  "name": "test",
+  "description": "test",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "remark-cli": "^11.0.0"
+  }
+}
