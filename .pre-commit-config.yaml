@@ -6,3 +6,4 @@ repos:
         entry: npx remark --quiet --frail
         language: node
         types: [markdown]
+        additional_dependencies: [remark-cli]
